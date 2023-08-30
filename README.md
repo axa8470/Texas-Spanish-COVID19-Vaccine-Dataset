@@ -18,23 +18,14 @@ In this repository, there is also the analysis code that can be used to replicat
 If you are using this dataset, please cite our paper:
 
 @article{aleksandric2022spanish,
-
   title={Spanish Facebook posts as an indicator of COVID-19 vaccine hesitancy in Texas},
-  
   author={Aleksandric, Ana and Anderson, Henry Isaac and Melcher, Sarah and Nilizadeh, Shirin and Wilson, Gabriela Mustata},
-  
   journal={Vaccines},
-  
   volume={10},
-  
   number={10},
-  
   pages={1713},
-  
   year={2022},
-  
   publisher={MDPI}
-  
 }
 
 
