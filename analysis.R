@@ -1,16 +1,14 @@
-spanish_facebook <- read.csv("/Users/ana/Desktop/health_informatics/texas/LIWC_sentiments/new_spanish_facebook_not_averaged.csv", colClasses=c('numeric','factor','factor','factor','numeric','numeric','numeric',
-                                                                                                                                     'numeric','numeric','numeric','numeric','numeric','character','numeric',
-                                                                                                                                     'numeric','numeric','numeric','numeric','numeric','numeric','numeric','numeric','numeric','numeric'))
+spanish_facebook <- read.csv("analyis_file.csv")
+
 hist(spanish_facebook$Anger)
 hist(log(spanish_facebook$Difference))
 shapiro.test(spanish_facebook$Difference)
-
 
 # cluster per both county and week
 library(multiwayvcov)
 library("lmtest")
 library("nortest")
-# negative significant, positive not significant, these are the ones we put in the paper
+
 formula = Difference ~ NEG  + Weighted_HL+ SVI+ Hispanic_pop + Black_pop + Asian_pop
 model1= lm(formula = formula, data= spanish_facebook)
 vcov1= cluster.vcov(model1, ~ County+ Week)
@@ -26,11 +24,6 @@ coeftest(model1, vcov1)
 # ---
 #   Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-res <- resid(model1)
-qqnorm(res)
-
-
-# joy and anger not significant, fear negative and significant
 formula = Difference ~ Fear  + Weighted_HL+ SVI+ Hispanic_pop + Black_pop + Asian_pop
 model1= lm(formula = formula, data= spanish_facebook)
 vcov1= cluster.vcov(model1, ~ County+ Week)
