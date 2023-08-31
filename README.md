@@ -1,4 +1,4 @@
-# Texas-Spanish-COVID19-Vaccine-Dataset
+# Texas-Spanish-COVID19-Vaccine-Facebook-Dataset
 
 The dataset gathered in the paper "Spanish Facebook Posts as an Indicator of COVID-19 Vaccine Hesitancy in Texas". Link to the paper: https://www.mdpi.com/2076-393X/10/10/1713.
 The dataset represents a collection of Spanish COVID-19 vaccine-related posts shared within counties with the highest number of COVID-19 cases in Texas.
